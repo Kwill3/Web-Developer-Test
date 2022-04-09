@@ -1,5 +1,277 @@
 // Styles start here
+@import './variables/media-queries';
+@import './variables/colors';
+@import './nav.scss';
+
+%bgSize {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
 
 body {
     background: #FFF;
+    width: 100%;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.main {
+    &-hero {
+        background-image: url('../../design-assets/Mobile/hero.png');
+        @extend %bgSize;
+        background-position: center center;
+        background-repeat: no repeat;
+        width: 100%;
+        height: auto;
+        @include desktop {
+            background-image: url('../../design-assets/Desktop/homepage-feature-extra-large-3.png');
+        }
+        & h1 {
+            color: $white;
+            display: flex;
+            flex-direction: column;
+            padding: 39.7% 16px 42.8%;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0.08px;
+            font-weight: 500;
+            @include desktop {
+                padding: 20% 8% 23%;
+                font-size: 20px;
+                line-height: 30px;
+                letter-spacing: -1;
+                font-weight: 400;
+            }
+            & span {
+                font-size: 32px;
+                line-height: 36px;
+                letter-spacing: -0.71px;
+                font-weight: 100;
+                @include desktop {
+                    font-size: 45px;
+                    line-height: 48px;
+                    letter-spacing: -1;
+                }
+            }
+        }
+    }
+
+    &-content1 {
+        background-color: $light;
+        text-align: center;
+        width: 100%;
+        & h2 {
+            width: 100%;
+            padding: 55px 0 52px;
+            font-size: 28px;
+            line-height: 32px;
+            letter-spacing: -0.38px;
+            font-weight: 200;
+            opacity: 0.54;
+            @include desktop {
+                padding: 131px 0 14px;
+                font-size: 34px;
+                line-height: 40px;
+                letter-spacing: -0.46px;
+            }
+        }
+        & p {
+            width: 78.5%;
+            margin: 0 auto;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.136px;
+            font-weight: 200;
+            opacity: 0.87;
+        }
+        & button {
+            margin: 20px 0 49px;
+            padding: 11px 20px;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.33px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.87);
+            background-color: $button;
+            border-radius: 3px;
+            border: none;
+            text-transform: uppercase;
+            filter: 
+                drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.14)) 
+                drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.12)) 
+                drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.2));
+            cursor: pointer;
+            @include desktop {
+                margin: 51px 0 136px;
+            }
+        }
+    }
+
+    &-content2 {
+        display: flex;
+        flex-direction: column;
+        @include desktop {
+            flex-direction: row-reverse;
+        }
+        &-card {
+            text-align: left;
+            @include desktop {
+                display: flex;
+                width: 50%;
+                flex-direction: column;
+                align-items: baseline;
+                justify-content: center;
+            }
+            & h2 {
+                width: 70%;
+                padding: 46px 0 20px 16px;
+                font-size: 28px;
+                line-height: 32px;
+                letter-spacing: -0.38px;
+                font-weight: 200;
+                opacity: 0.54;
+                @include desktop {
+                    padding: 17px 0;
+                    margin: 0 auto;
+                    font-size: 34px;
+                    line-height: 40px;
+                    letter-spacing: -0.46px;
+                }
+            }
+            & p {
+                padding: 0 16px;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.136px;
+                font-weight: 200;
+                opacity: 0.87;
+                @include desktop {
+                    width: 70%;
+                    padding: 0;
+                    margin: 0 auto;
+                }
+            }
+            & button {
+                margin: 18px 23px 45px;
+                padding: 11px 12.5px;
+                font-size: 12px;
+                line-height: 14px;
+                letter-spacing: 0.33px;
+                font-weight: 400;
+                color: rgba(255, 255, 255, 0.87);
+                background-color: $button;
+                border-radius: 3px;
+                border: none;
+                text-transform: uppercase;
+                cursor: pointer;
+                filter: 
+                    drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.14)) 
+                    drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.12)) 
+                    drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.2));
+                @include desktop {
+                    margin: 52px 0 0 15%;
+                }
+            }
+        }
+        &-image {
+            width: 100%;
+            padding-top: 100%;
+            background-image: url('../../design-assets/Mobile/block-image.png');
+            @extend %bgSize;
+            background-position: center center;
+            background-repeat: no-repeat;
+            @include desktop {
+                width: 50%;
+                padding-top: 50%;
+                background-image: url('../../design-assets/Desktop/image.png');
+            }
+        }
+    }
+}
+
+.footer {
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    &-logo {
+        margin: 45px 0 0 16px;
+        @include desktop {
+            margin: 0 47px;
+        }
+    }
+    &-nav {
+        display: flex;
+        flex-direction: column;
+        margin: 25px 0 32px 16px;
+        @include desktop {
+            flex: auto;
+        }
+        & a {
+            padding: 11px 0;
+            margin-bottom: 8px;
+            text-decoration: none;
+            color: $dark;
+            text-transform: uppercase;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.32;
+            font-weight: 400;
+        }
+    }
+    &-last {
+        &-socials {
+            display: flex;
+            flex-direction: row;
+            margin: 0 0 30px 16px;
+            @include desktop {
+                margin: 0 24px 20px 0;
+            }
+            & div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 30px;
+                width: 30px;
+                margin-right: 20px;
+                @include desktop {
+                    height: 48px;
+                    width: 48px;
+                    margin-right: 24px;
+                }
+                & img {
+                    opacity: 0.54;
+                    cursor: pointer;
+                    @include desktop {
+                        height: 25px;
+                        width: 25px;
+                    }
+                }
+                #google {
+                    opacity: 1;
+                    cursor: pointer;
+                    @include desktop {
+                        height: 35px;
+                        width: 35px;
+                    }
+                }
+            }
+        }
+        &-pp {
+            margin: 0 36px 0 16px;
+            @include desktop {
+                text-align: right;
+            }
+            & p {
+                font-size: 12px;
+                line-height: 16px;
+                letter-spacing: 0.07;
+                font-weight: 500;
+                opacity: 0.54;
+            }
+        }
+    }
 }
