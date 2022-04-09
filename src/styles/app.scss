@@ -11,7 +11,7 @@
 }
 
 body {
-    background: #FFF;
+    background: $white;
     width: 100%;
     font-family: 'Libre Franklin', sans-serif;
 }
@@ -97,10 +97,12 @@ body {
             border-radius: 3px;
             border: none;
             text-transform: uppercase;
-            filter: 
-                drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.14)) 
-                drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.12)) 
-                drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.2));
+            &:hover {
+                filter: 
+                    drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.14)) 
+                    drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.12)) 
+                    drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.2));
+            }
             cursor: pointer;
             @include desktop {
                 margin: 51px 0 136px;
@@ -165,10 +167,12 @@ body {
                 border: none;
                 text-transform: uppercase;
                 cursor: pointer;
-                filter: 
-                    drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.14)) 
-                    drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.12)) 
-                    drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.2));
+                &:hover {
+                    filter: 
+                        drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.14)) 
+                        drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.12)) 
+                        drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.2));
+                }
                 @include desktop {
                     margin: 52px 0 0 15%;
                 }
@@ -198,28 +202,34 @@ body {
         justify-content: center;
     }
     &-logo {
-        margin: 45px 0 0 16px;
+        padding: 45px 0 0 16px;
         @include desktop {
-            margin: 0 47px;
+            padding: 0 47px;
         }
     }
     &-nav {
         display: flex;
-        flex-direction: column;
-        margin: 25px 0 32px 16px;
         @include desktop {
             flex: auto;
         }
-        & a {
-            padding: 11px 0;
-            margin-bottom: 8px;
-            text-decoration: none;
-            color: $dark;
-            text-transform: uppercase;
-            font-size: 12px;
-            line-height: 14px;
-            letter-spacing: 0.32;
-            font-weight: 400;
+        &-links {
+            display: flex;
+            flex-direction: column;
+            margin: 25px 0 32px 16px;
+            & a {
+                padding: 11px 0;
+                margin-bottom: 8px;
+                text-decoration: none;
+                color: $dark;
+                text-transform: uppercase;
+                font-size: 12px;
+                line-height: 14px;
+                letter-spacing: 0.32;
+                font-weight: 400;
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
         }
     }
     &-last {
@@ -240,11 +250,14 @@ body {
                 @include desktop {
                     height: 48px;
                     width: 48px;
-                    margin-right: 24px;
+                    margin-right: 15px;
                 }
                 & img {
                     opacity: 0.54;
                     cursor: pointer;
+                    &:hover {
+                        opacity: 0.3;
+                    }
                     @include desktop {
                         height: 25px;
                         width: 25px;
@@ -253,6 +266,9 @@ body {
                 #google {
                     opacity: 1;
                     cursor: pointer;
+                    &:hover {
+                        opacity: 0.7;
+                    }
                     @include desktop {
                         height: 35px;
                         width: 35px;

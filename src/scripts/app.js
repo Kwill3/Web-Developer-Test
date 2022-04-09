@@ -1,10 +1,18 @@
 // Scripts start here
 console.log('Welcome to my App');
 
-const toggleBurger = document.getElementsByClassName('navbar-burger-icon')[0];
-const navbarMenu = document.getElementsByClassName('navbar-menu')[0];
+const toggleBurger = document.querySelector('.navbar-burger-icon');
+const navbarMenu = document.querySelector('.navbar-menu-links');
+const burgerBg = document.querySelector('.navbar-menu');
 
 toggleBurger.addEventListener('click', () => {
     navbarMenu.classList.toggle('active');
-    console.log('clicked!');
+    burgerBg.classList.toggle('active');
+    toggleBurger.classList.toggle('active');
+});
+
+burgerBg.addEventListener('click', () => {
+    navbarMenu.classList.remove('active');
+    burgerBg.classList.remove('active');
+    toggleBurger.classList.remove('active');
 });
