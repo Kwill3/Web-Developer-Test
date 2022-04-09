@@ -32,7 +32,13 @@ module.exports = function(grunt) {
         cwd: 'src/assets',
         src: '**/*',
         dest: 'public/assets'
-        },
+      },
+      reset: {
+        expand: true,
+        cwd: 'src/styles',
+        src: '**/reset.css',
+        dest: 'public/styles'
+      },
     },
 
     sass: {
