@@ -18,14 +18,14 @@ body {
 
 .main {
     &-hero {
-        background-image: url('../../design-assets/Mobile/hero.png');
+        background-image: url('../assets/Mobile/hero.png');
         @extend %bgSize;
         background-position: center center;
         background-repeat: no repeat;
         width: 100%;
         height: auto;
         @include desktop {
-            background-image: url('../../design-assets/Desktop/homepage-feature-extra-large-3.png');
+            background-image: url('../assets/Desktop/homepage-feature-extra-large-3.png');
         }
         & h1 {
             color: $white;
@@ -181,14 +181,14 @@ body {
         &-image {
             width: 100%;
             padding-top: 100%;
-            background-image: url('../../design-assets/Mobile/block-image.png');
+            background-image: url('../assets/Mobile/block-image.png');
             @extend %bgSize;
             background-position: center center;
             background-repeat: no-repeat;
             @include desktop {
                 width: 50%;
                 padding-top: 50%;
-                background-image: url('../../design-assets/Desktop/image.png');
+                background-image: url('../assets/Desktop/image.png');
             }
         }
     }

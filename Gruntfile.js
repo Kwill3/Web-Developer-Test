@@ -26,7 +26,13 @@ module.exports = function(grunt) {
         cwd: 'src/api',
         src: '**/*.json',
         dest: 'public/'
-      }
+      },
+      assets: {
+        expand: true,
+        cwd: 'src/assets',
+        src: '**/*',
+        dest: 'public/assets'
+        },
     },
 
     sass: {
