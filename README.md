@@ -1,18 +1,16 @@
-# My Application
-
-A basic structure of a web application for web developers to develop upon and show their skills.
-
-### Please DO NOT mention any Company or Individual names in code, when forking, committing, branching, developing or completing the exercise. 
-
 # Dependancies
 > node ^10.15.3
 
 > grunt-cli ```npm install -g grunt-cli```
 
-# Get Started
+# Setup and Run instructions
 
 - Fork this repo
-- Clone your repo
+- Clone the repo
+- Change to project root dir
+```
+cd Web-Developer-Test
+```
 
 ## Install dependancies
 ```
@@ -29,33 +27,23 @@ grunt dev
 npm start
 ```
 
-## Creative assets  
-Look in ```./design-assets```
+## Libraries used and why
+- I used the SASS library to develop my style files because it helps save a lot of keystrokes by nesting styles and makes responsive web designing easier. 
+- Javascript is used for registering click events (burger menu) and deploy the menu dropdown.
 
-### Fonts
-All free to download or include from [https://fonts.google.com/specimen/Libre+Franklin](https://fonts.google.com/specimen/Libre+Franklin) (Regular and ExtraLight)
+## How long did you spend on this project?
+A day.
 
 ## Which Browsers/Devices or Virtualisation services did you check the application in?
-
+- Desktop:
+Firefox, Chrome and Brave.
+- Mobile:
+Firefox and Safari.
 
 ## Anything you want to tell us?
-- Assumptions?
-- Decisions?
-- What you used to develop and test?
+- Features:
+Hover effects on navbar links, the blue buttons, footer links and also the socials icons.
+On-click event handling on burger menu which activate and deactivates dropdown and background shadowing.
 
-
-## What did you think of this test/exercise?
-### What did you like?
-1.
-2.
-3.
-
-### What could be improved?
-1.
-2.
-3.
-
-### What didn't you like?
-1.
-2.
-3.
+- Decisions:
+The design asset featured a MENU link on the navbar for mobile screen but I found it redundant as the burger menu is essentially the same thing so I decided not to include it in my project. It is also weird that it doesn't exist on the desktop screen so removing it will make the site more uniform.
