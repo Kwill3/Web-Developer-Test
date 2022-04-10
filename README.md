@@ -37,8 +37,6 @@ A day.
 ## Which Browsers/Devices or Virtualisation services did you check the application in?
 - Desktop:
 Firefox, Chrome and Brave.
-- Mobile:
-Firefox and Safari.
 
 ## Anything you want to tell us?
 - Features:
