@@ -44,4 +44,4 @@ Hover effects on navbar links, the blue buttons, footer links and also the socia
 On-click event handling on burger menu which activate and deactivates dropdown and background shadowing.
 
 - Decisions:
-The design asset featured a MENU link on the navbar for mobile screen but I found it redundant as the burger menu is essentially the same thing so I decided not to include it in my project. It is also weird that it doesn't exist on the desktop screen so removing it will make the site more uniform.
+The design asset featured a MENU link on the navbar for mobile screen but I found it redundant as the burger menu is essentially the same thing so I decided not to include it in my project. It is also weird that it doesn't exist on the desktop screen so removing it will make the site more clean and uniform.
